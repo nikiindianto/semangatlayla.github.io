@@ -1,0 +1,32 @@
+.konten{
+    position: absolute;
+    top: 0;
+    left: 50;
+    margin-left: 50%;
+}
+
+.jam{
+    font-size: 100px;
+    font-family: 'PT Mono', monospace;
+}
+
+.naik{
+    margin-top: -200px;
+}
+
+.text{
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    font-family: 'Bitter', serif;
+}
+
+@media only screen and (max-width: 800px) {
+    .text{
+        font-size: 20px;
+    }
+    .jam{
+        font-size: 50px;
+        font-family: 'PT Mono', monospace;
+    }
+  }

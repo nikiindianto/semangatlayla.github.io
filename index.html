@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>#SEMANGAT</title>
+    <meta name="description" content="Examples for creative website header animations using Canvas and JavaScript" />
+    <meta name="keywords" content="header, canvas, animated, creative, inspiration, javascript" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.rawgit.com/mrvautin/typewrite/master/dist/typewrite.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css.css">
+    <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quantico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@6.1.1/dist/typeit.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+            let person = prompt("Please enter your name", "layla");
+            let text ='Hii';
+            let msg = " :)";
+            let msg2 = "i hope you enjoy your day :)";
+            let hapus = 28;
+           let msg3 ="";
+            let hapus3 = 0;
+            let hapus2 = 0;
+            var today = new Date();
+            var kk = today.getHours();
+            if (kk < 12){
+                text = "Good Morning "+person;
+                msg ="hey it's time for doing everything"
+                hapus =34;
+                msg2="have a good day"
+                hapus2=15
+
+            } 
+            if (kk >= 12){
+                text = "Good Afternoon "+person;
+                msg = "keep it up for today"
+                hapus = 20;
+                msg2="yess you can do it";
+                hapus2=18;
+            }
+             if (kk >= 17){
+                text = "Good Evening "+person;
+                msg ="How Was Your Day ?"
+                hapus=18;
+                msg2 = "i hope you have a good day";
+                hapus2 = 26;
+                
+            }
+
+            if (kk >= 22){
+                text = "Good Night "+person;
+                msg ="Hey its Time to slepp"
+                hapus= 21;
+                msg2 = "go to sleep and have a nice dream :)"
+                hapus2= 36;
+                
+
+            }
+
+            
+            new TypeIt("#simpleUsage", {
+                strings: [text, msg],
+                speed: 100,
+                waitUntilVisible: true,
+                deleteSpeed: 100,
+                loopDelay: 2000,
+                loop : true
+            }).go().pause(1000).pause(2000).delete(hapus).type(msg2).pause(2000).delete(hapus2).type('Stay Safe For You :)').pause(1000).delete(20).type('#dirumahaja').pause(6000);
+        });
+    </script>
+    <script>
+        var hglobal;
+        function startTime() {
+            var today = new Date();
+            p="anjuing";
+             var h = today.getHours();
+             var m = today.getMinutes();
+            var s = today.getSeconds();
+            
+            h = checkTime(h);
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML =
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+        
+      
+
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+        
+    </script>
+
+</head>
+
+<body onload="startTime()">
+    <div class="container demo-1">
+        <div class="content">
+            <div id="large-header" class="large-header">
+                <canvas id="demo-canvas"></canvas>
+                <div class="main-title">
+
+                    <p id="simpleUsage" class="text"></p>
+                </div>
+                <div class="main-title naik">
+                    <p id="txt" class="jam"></p>
+                </div>
+
+            </div>
+            <!-- <div class="codrops-top clearfix">
+					<a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/OffCanvasMenuEffects/"><span>Previous Demo</span></a>
+					<a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=20153"><span>Back to the Codrops Article</span></a>
+				</div>
+				<div class="codrops-header">
+					<h1>Animated Background Headers <span>Examples for creative website header animations using Canvas and JavaScript</span></h1>
+					<nav class="codrops-demos">
+						<a class="current-demo" href="index.html">Demo 1</a>
+						<a href="index2.html">Demo 2</a>
+						<a href="index3.html">Demo 3</a>
+						<a href="index4.html">Demo 4</a>
+					</nav>
+				</div>
+			</div> -->
+            <!-- Related demos -->
+            <!-- <section class="related">
+				<p>If you enjoyed this demo you might also like:</p>
+				<a href="http://tympanus.net/Development/HeaderEffects/">
+					<img src="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/uploads/2013/07/HeaderEffects-300x162.jpg" />
+					<h3>On Scroll Header Effects</h3>
+				</a>
+				<a href="http://tympanus.net/Development/ArticleIntroEffects/">
+					<img src="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/uploads/2014/05/ArticleIntroEffects-300x162.png" />
+					<h3>Inspiration for Article Intro Effects</h3>
+				</a>
+			</section> -->
+            <!-- <p class="ref">Image credits: <a href="http://www.eso.org/public/images/eso1205a/">ESO/VISTA/J. Emerson. Acknowledgment: Cambridge Astronomical Survey Unit</a></p> -->
+        </div><!-- /container -->
+        <script src="js/TweenLite.min.js"></script>
+        <script src="js/EasePack.min.js"></script>
+        <script src="js/rAF.js"></script>
+        <script src="js/demo-1.js"></script>
+        <audio autoplay="autoplay" controls="controls" src="https://h.top4top.io/m_1856d86cv0.mp3" type="audio/mpeg"></audio>
+</body>
+
+</html>
